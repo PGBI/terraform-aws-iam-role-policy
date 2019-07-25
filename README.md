@@ -5,7 +5,7 @@ without the need to write the policy in JSON format or to use the `aws_iam_polic
 
 Usage:
 
-```
+```hcl
 module "iam_role_policy" {
   source  = "PGBI/iam-role-policy/aws"
   version = "~>0.1.0"
@@ -28,7 +28,8 @@ module "iam_role_policy" {
 ```
 
 The above example is equivalent to:
-```
+
+```hcl
 data "aws_iam_policy_document" "main" {
   statement {
     actions   = ["ec2:Describe*"]
